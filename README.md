@@ -6,17 +6,12 @@ This is a fork of `coreui-nostr-free-react-admin-template`. That template retain
 
 A record of steps will be kept in this README as I go along.
 
-# Steps
+## Deploy
 
 - In github, go to repo for `coreui-nostr-free-react-admin-template`, find `Use this Template` - select `Create a new repository`, and name it `coreui-nostr-free-react-admin-template-b`.
 - Cloned locally: 
 
-```
-git clone https://github.com/wds4/coreui-nostr-free-react-admin-template-b.git
-cd coreui-nostr-free-react-admin-template-b
-npm install
-npm start
-```
+
 - Go to Vercel account, find `Add New Project`. Should see option to `Import Git Repository`. Select the repo we just created. Use these options:
 - Framework Preset is Vite. (automatically)
 - Did NOT select src as the root directory, just left it as it is.
@@ -25,9 +20,16 @@ npm start
 - No Environmental Variables.
 - Click Deploy.
 
-## Quick Start
+## Run Locally
 
-- Clone the repo: `git clone https://github.com/wds4/coreui-nostr-free-react-admin-template-b.git`
+To run on your machine locally:
+
+### Clone
+
+``` bash
+$ git clone https://github.com/wds4/coreui-nostr-free-react-admin-template-b.git
+$ cd coreui-nostr-free-react-admin-template-b
+```
 
 ### Installation
 
@@ -73,8 +75,6 @@ or
 $ yarn build
 ```
 
-## Copyright and License
-
-copyright 2024 creativeLabs Łukasz Holeczek.   
+## License
 
 Code released under [the MIT license](https://github.com/coreui/coreui-free-react-admin-template/blob/main/LICENSE).

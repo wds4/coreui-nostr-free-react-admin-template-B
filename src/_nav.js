@@ -28,7 +28,29 @@ const _nav = [
   },
   {
     component: CNavTitle,
-    name: 'Navigation Title',
+    name: 'My Profile',
+  },
+  {
+    component: CNavGroup,
+    name: 'MyProfile',
+    to: '/myProfile',
+    icon: <CIcon icon={cilCursor} customClassName="nav-icon" />,
+    items: [
+      {
+        component: CNavItem,
+        name: 'MyProfile',
+        to: '/myProfile/myProfile',
+      },
+      {
+        component: CNavItem,
+        name: 'Follows',
+        to: '/myProfile/follows',
+      },
+    ],
+  },
+  {
+    component: CNavTitle,
+    name: 'Settings',
   },
   {
     component: CNavGroup,

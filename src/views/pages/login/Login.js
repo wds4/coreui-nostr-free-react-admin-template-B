@@ -66,7 +66,7 @@ const LoginWithExtension = () => {
     return (
       <>
         <CCardBody>
-          <CCardTitle>Browser extension detected! (getalby, Nos2x, nostr-keyx ...)</CCardTitle>
+          <CCardTitle>Browser extension detected!</CCardTitle>
           <Link to="/dashboard">
             <CButton
               color="primary"
