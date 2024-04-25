@@ -4,15 +4,15 @@ This is a fork of `coreui-nostr-free-react-admin-template`. That template retain
 - view profile of other users
 - store my kind 1 notes in redux and display them (event.id only, nothing fancy)
 
-A record of steps will be kept in this README as I go along.
+
 
 ## Deploy
 
-- In github, go to repo for `coreui-nostr-free-react-admin-template`, find `Use this Template` - select `Create a new repository`, and name it `coreui-nostr-free-react-admin-template-b`.
-- Cloned locally: 
+To deploy this to Vercel: clone this template to your github account, connect your Vercel account to your github account, and follow the instructions:
 
+- Go to your Vercel account, find `Add New Project`. Should see option to `Import Git Repository`. Select the repo from your github account.
 
-- Go to Vercel account, find `Add New Project`. Should see option to `Import Git Repository`. Select the repo we just created. Use these options:
+Use these options:
 - Framework Preset is Vite. (automatically)
 - Did NOT select src as the root directory, just left it as it is.
 - Under Build and Output Settings, next to Output Directory, click Override and replace `dist` with `build`.
