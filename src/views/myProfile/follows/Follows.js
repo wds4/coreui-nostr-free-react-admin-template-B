@@ -22,11 +22,7 @@ const Follows = () => {
   const myName = useSelector((state) => state.profile.name)
   const aFollows = useSelector((state) => state.profile.kind3.follows)
 
-  const myNpub = 'npub1u5njm6g5h5cpw4wy8xugu62e5s7f6fnysv0sj0z3a8rengt2zqhsxrldq3'
-  const foo = getProfile(myNpub)?.name
-
   const setCurrentNpub = (newNpub) => {
-    console.log('setCurrentNpub: ' + newNpub)
     dispatch(updateNpub(newNpub))
   }
   return (
@@ -43,6 +39,10 @@ const Follows = () => {
                   {aFollows.map((pubkey, item) => {
                     const npub = nip19.npubEncode(pubkey)
                     const name = getProfile(npub)?.name
+                    let foo = npub
+                    if (name) {
+                      foo = name
+                    }
                     return (
                       <CListGroupItem
                         key={item}
@@ -50,7 +50,7 @@ const Follows = () => {
                         href="#/profile"
                         onClick={() => setCurrentNpub(npub)}
                       >
-                        {name} - {npub}
+                        {foo}
                       </CListGroupItem>
                     )
                   })}

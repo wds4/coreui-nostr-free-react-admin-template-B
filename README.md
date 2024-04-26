@@ -5,7 +5,6 @@ This is a fork of `coreui-nostr-free-react-admin-template`. That template retain
 - store my kind 1 notes in redux and display them (event.id only, nothing fancy)
 
 
-
 ## Deploy
 
 To deploy this to Vercel: clone this template to your github account, connect your Vercel account to your github account, and follow the instructions:
