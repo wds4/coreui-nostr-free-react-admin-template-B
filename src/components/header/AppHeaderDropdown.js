@@ -35,11 +35,11 @@ const AppHeaderDropdown = () => {
   const runLogout = () => {
     dispatch(wipeActiveProfile())
   }
-  let loginItem = 'show'
-  let logoutItem = 'hide'
+  let loggedOut = 'show'
+  let loggedIn = 'hide'
   if (signedIn) {
-    loginItem = 'hide'
-    logoutItem = 'show'
+    loggedOut = 'hide'
+    loggedIn = 'show'
   }
   return (
     <CDropdown variant="nav-item">
@@ -47,25 +47,21 @@ const AppHeaderDropdown = () => {
         <CAvatar src={myPictureUrl} size="md" />
       </CDropdownToggle>
       <CDropdownMenu className="pt-0" placement="bottom-end">
-        <CDropdownHeader className="bg-body-secondary fw-semibold mb-2">Account</CDropdownHeader>
-        <CDropdownItem href="#/myProfile/myProfile">
-          <CIcon icon={cilUser} className="me-2" />
-          My Profile
-        </CDropdownItem>
-        <CDropdownItem href="#/notifications">
-          <CIcon icon={cilBell} className="me-2" />
-          Notifications
-          <CBadge color="info" className="ms-2">
-            42
-          </CBadge>
-        </CDropdownItem>
-        <CDropdownItem href="#/directMessages">
-          <CIcon icon={cilEnvelopeOpen} className="me-2" />
-          Messages
-          <CBadge color="success" className="ms-2">
-            42
-          </CBadge>
-        </CDropdownItem>
+        <div className={loggedIn}>
+          <CDropdownHeader className="bg-body-secondary fw-semibold mb-2">Account</CDropdownHeader>
+          <CDropdownItem href="#/myProfile/myProfile">
+            <CIcon icon={cilUser} className="me-2" />
+            My Profile
+          </CDropdownItem>
+          <CDropdownItem href="#/notifications">
+            <CIcon icon={cilBell} className="me-2" />
+            Notifications
+          </CDropdownItem>
+          <CDropdownItem href="#/directMessages">
+            <CIcon icon={cilEnvelopeOpen} className="me-2" />
+            Messages
+          </CDropdownItem>
+        </div>
         <CDropdownHeader className="bg-body-secondary fw-semibold my-2">Settings</CDropdownHeader>
         <CDropdownItem href="#/settings/generalSettings">
           <CIcon icon={cilSettings} className="me-2" />
@@ -76,11 +72,11 @@ const AppHeaderDropdown = () => {
           Relays
         </CDropdownItem>
         <CDropdownDivider />
-        <CDropdownItem onClick={runLogout} href="#" className={logoutItem}>
+        <CDropdownItem onClick={runLogout} href="#" className={loggedIn}>
           <CIcon icon={cilArrowThickFromRight} className="me-2" />
           Logout
         </CDropdownItem>
-        <CDropdownItem href="#/login" className={loginItem}>
+        <CDropdownItem href="#/login" className={loggedOut}>
           <CIcon icon={cilArrowThickFromLeft} className="me-2" />
           Login
         </CDropdownItem>
