@@ -9,7 +9,7 @@ const Dashboard = () => {
     <>
       <center>
         <h3>
-          CoreUI Nostr React Admin Template{' '}
+          CoreUI Nostr React Admin & Dashboard Template{' '}
           <a
             href="https://github.com/wds4/coreui-nostr-free-react-admin-template-B"
             target="_blank"
